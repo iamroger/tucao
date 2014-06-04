@@ -1,0 +1,28 @@
+flash cover
+backend load
+
+page 1.
+review
+
+good/bad function ( one ip only have once time,super user is not limited )
+create table COMPANYGBIP(int COMPANY_ID, char(15) IP);
+if( id & ip exist ) then failed.
+
+page 2.
+comment of comments, collapsible
+create table COMMENTS(int ID increasment, int COMPANY_ID, varchar(1024) CONTENT, int GOOD, int BAD);
+create table COMMENTSGBIP(int COMMENTS_ID, char(15) IP);
+create table FOLLOWCOMMENTS(int ID increasment, int COMMENTS_ID, varchar(1024) CONTENT); 
+
+
+page 3.
+stock glyph
+price, today Gains and losses
+
+
+page 4.
+user, login
+
+
+http://stackoverflow.com/questions/4478863/show-image-from-blob-in-javascript
+http://stackoverflow.com/questions/11089732/display-image-from-blob-using-javascript-and-websockets?lq=1

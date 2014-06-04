@@ -1,0 +1,17 @@
+drop table COMMENTS;
+
+drop table FOLLOWCOMMENTS;
+
+drop table USER;
+
+drop table COMPANY;
+
+create table COMMENTS(ID int auto_increment primary key not null, COMPANY_ID int not null, CONTENT varchar(1024) ,  GOOD int default  0,  BAD int default 0,  IP_ID int default 1, DATE timestamp default now());
+
+create table FOLLOWCOMMENTS(ID int auto_increment primary key not null, COMMENTS_ID int not null, CONTENT varchar(1024) ,  IP_ID int default 1, DATE timestamp default now()); 
+
+create table USER(ID int auto_increment primary key not null, IP char(15) unique not null, NAME varchar(32) default '匿名', SCORE int default 0, DATE timestamp default now());
+
+create table COMPANY(ID int auto_increment primary key not null, NAME varchar(128) unique not null, ADDRESS varchar(256) not null , INTRODUCE varchar(256), GOOD int default  0,  BAD int default 0,  IP char(15), DATE timestamp default now());
+
+insert into USER(IP)values('15800000000');
